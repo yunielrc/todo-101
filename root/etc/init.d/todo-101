@@ -1,0 +1,11 @@
+#!/sbin/openrc-run
+
+name="todo"
+description="A simple todo list manager"
+command="/usr/bin/node /app/src/index.js"
+pidfile="/run/${RC_SVCNAME}.pid"
+command_args="-p ${pidfile}"
+
+depend() {
+  need net
+}

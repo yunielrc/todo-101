@@ -1,2 +1,3 @@
+# see rsync option --exclude-from=FILE
 README.md
 Vedvfile

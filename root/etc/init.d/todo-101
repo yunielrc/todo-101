@@ -2,9 +2,13 @@
 
 name="todo"
 description="A simple todo list manager"
-command="/usr/bin/node /app/src/index.js"
+command="/usr/bin/node"
+directory="/app"
+command_args="src/index.js"
+command_background="yes"
 pidfile="/run/${RC_SVCNAME}.pid"
-command_args="-p ${pidfile}"
+output_log="/var/log/${RC_SVCNAME}.log"
+error_log="${output_log}"
 
 depend() {
   need net
